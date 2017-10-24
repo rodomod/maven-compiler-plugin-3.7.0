@@ -1,29 +1,23 @@
-# README #
+# Maven
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Maven is available under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
-### What is this repository for? ###
+- [Maven Issue Tracker](https://issues.apache.org/jira/browse/MNG)
+- [Maven Wiki](https://cwiki.apache.org/confluence/display/MAVEN/Index)
+- [Building Maven](https://maven.apache.org/guides/development/guide-building-maven.html)
+- [Running Core ITs](https://maven.apache.org/core-its/core-it-suite/)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Bootstrapping Basics
 
-### How do I get set up? ###
+If you want to bootstrap Maven, you'll need:
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+- Java 1.7+
+- Maven 3.0.5 or later
 
-### Contribution guidelines ###
+Run Maven, specifying a location into which the completed Maven distro should be installed:
 
-* Writing tests
-* Code review
-* Other guidelines
+```
+mvn -DdistributionTargetDir="$HOME/app/maven/apache-maven-3.5.x-SNAPSHOT" clean package
+```
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Once the build completes, you should have a new Maven distro ready to roll in that directory!
