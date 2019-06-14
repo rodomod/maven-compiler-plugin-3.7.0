@@ -1,29 +1,49 @@
-# README #
+#### === README === ####
+# Установка Мавен #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Последнюю версию всегда можно скачать на странице загрузки на официальном сайте. ##
+### Просто распаковываем архив в любую директорию. ###
+#### Далее необходимо создать переменную в Path, в которой необходимо указать путь к Maven. ####
+##### Заходим в Win + Pause – Дополнительно – #####
+###### Переменные среды – в верхнем окошке нажимаем Создать,
+# вводим имя M2_HOME и значение допустим "C:\apache-maven-2.2.1". #
+# Далее там же #
+#####  создаем еще одну переменную M2 со значением %M2_HOME%\bin. ####
+#### Так же убеждаемся, что есть переменная JAVA_HOME с путем к JDK. ###
+### Ее значение должно быть примерно таким "C:\Program Files\Java\jdk1.6.0_10\". ###
+## И наконец в том же окошке создаем/модифицируем переменную Path, ##
+## в нее необходимо просто написать %M2%, чтобы наша папочка с исполняемым файлом Maven была видна из командной строки. ##
+# Теперь необходимо проверить работоспособность нашей установки. Для этого заходим в командную строку и вводим команду #
+✦ mvn –version
+✦ Должна появиться информация о версиях Maven, jre и операционной системе, что-то вроде:
+✦ Maven version: 2.2.1
+✦ Java version: 1.6.0_10
+✦ OS name: "windows 2003" version: "5.2" arch: "x86" Family: "windows"
 
-### What is this repository for? ###
+# Maven создаст вам локальный репозиторий в вашей личной папке,
+## например в каталоге C:\Documents and Settings\username\.m2\repository
+### Все, Maven готов к работе, можно приступать к созданию приложения.
+## В данной статье мы рассмотрим процесс создания простой программы,
+#  .
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+✦0) mvn validate : проверка корректности метаинформации о проекте  .
 
-### How do I get set up? ###
+✦1) mvn compile : компилирует исходники .
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+✦2) mvn test : прогоняет тесты классов из предыдущего шага .
 
-### Contribution guidelines ###
+✦3) mvn package : упаковка скомпилированных классов в формат war,jar... .
 
-* Writing tests
-* Code review
-* Other guidelines
+✦4) mvn integration-test : отправляет упакованные классы в среду интегрированного тестирования и прогоняет тесты .
 
-### Who do I talk to? ###
+✦5) mvn verify : проверяет корректность пакета и удовлетворение требованиям качества .
 
-* Repo owner or admin
-* Other community or team contact
+✦6) mvn install : загоняет пакет в локальный репозиторий,откуда он будет доступен для использования как зависимость в других проектах .
+             
+✦7) mvn deploy : отправляет пакет на удалённый production сервер,откуда другие разработчики его могут получить и использовать  .			 
+
+✦8) mvn site : ... .
+
+✦9) mvn clean install : перезапись проекта .
+
+✦10) mvn relase:perform  : выполнить(запуск проекта)! .
