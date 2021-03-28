@@ -32,7 +32,7 @@
 ✦ mvn -version
 
 Должна появиться информация о версиях Maven, jre и операционной системе, что-то вроде:
-![](https://pbs.twimg.com/media/ELbnuBuWwAYZQ8R?format=jpg&name=small)
+![](M.png)
 
 
 Maven version: 3.6.1
