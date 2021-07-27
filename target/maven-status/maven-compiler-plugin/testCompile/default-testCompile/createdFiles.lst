@@ -1,0 +1,4 @@
+org\apache\maven\plugin\compiler\CompilerMojoTestCase.class
+org\apache\maven\plugin\compiler\stubs\CompilerManagerStub.class
+org\apache\maven\plugin\compiler\stubs\DebugEnabledLog.class
+org\apache\maven\plugin\compiler\stubs\CompilerStub.class
